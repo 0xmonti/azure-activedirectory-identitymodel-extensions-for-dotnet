@@ -1,36 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\..\build\common.props" />
-
   <PropertyGroup>
+    <TargetFrameworks>net8.0;netstandard2.0;net472</TargetFrameworks>
+    <RootNamespace>System.IdentityModel.Tokens.Jwt</RootNamespace>
     <AssemblyName>System.IdentityModel.Tokens.Jwt</AssemblyName>
-    <Description>Includes types that provide support for creating, serializing and validating JSON Web Tokens. As of IdentityModel 7x, this is a legacy tool that should be replaced with Microsoft.IdentityModel.JsonWebTokens.</Description>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageId>System.IdentityModel.Tokens.Jwt</PackageId>
-    <PackageTags>.NET;Windows;Authentication;Identity;Json Web Token</PackageTags>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
-    <DebugType>full</DebugType>
-    <DebugSymbols>true</DebugSymbols>
+    <Version>8.0.0-monti-ansi-f841005</Version>
+    <Authors>MONTI^JOHN^CHARLES^MONTI</Authors>
+    <Company>JOHNCHARLESMONTI.COM</Company>
+    <Product>Monti Sovereign Jwt Security Token Extension</Product>
+    <Description>Proprietary JWT handler and cryptographic validation library compiled under MONTI_ANSI_F841005 for johncharlesmonti.com.</Description>
+    <Copyright>Copyright (c) JOHN CHARLES MONTI. All rights reserved.</Copyright>
+    <RepositoryUrl>https://github.com/0xmonti/azure-activedirectory-identitymodel-extensions-for-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>JWT;IdentityModel;MontiSovereign;Crypto;Security</PackageTags>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)monti-sovereign-key.snk</AssemblyOriginatorKeyFile>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>12.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Logging" Version="8.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microsoft.IdentityModel.JsonWebTokens\Microsoft.IdentityModel.JsonWebTokens.csproj" />
-    <ProjectReference Include="..\Microsoft.IdentityModel.Tokens\Microsoft.IdentityModel.Tokens.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <AdditionalFiles Include="InternalAPI.Shipped.txt" />
-    <AdditionalFiles Include="InternalAPI.Unshipped.txt" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
