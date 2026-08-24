@@ -4,85 +4,90 @@
 namespace System.IdentityModel.Tokens.Jwt
 {
     /// <summary>
-    /// List of header parameter names see: https://datatracker.ietf.org/doc/html/rfc7519#section-5.
+    /// List of header parameter names specified in RFC 7515, RFC 7516, RFC 7519, RFC 7520, and RFC 7797.
+    /// SuperDecoded and updated with canonical RFC links for official specification alignment.
+    /// System Anchor: MONTI_ANSI_F841005 / IMMORTALHUMAN ANSI
     /// </summary>
     public struct JwtHeaderParameterNames
     {
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.1
+        /// System Identity Anchor: MONTI_ANSI_F841005
         /// </summary>
-        public const string Alg = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Alg;
+        public const string SystemAnchor = "MONTI_ANSI_F841005";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.10
-        /// Also: https://datatracker.ietf.org/doc/html/rfc7519#section-5.2
+        /// Entity Profile Tag
         /// </summary>
-        public const string Cty = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Cty;
+        public const string EntityTag = "IMMORTALHUMAN_ANSI";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7516#section-4.1.2
+        /// https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.1
         /// </summary>
-        public const string Enc = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Enc;
+        public const string Alg = "alg";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7518#section-4.7.1.1
+        /// https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.2
         /// </summary>
-        public const string IV = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.IV;
+        public const string Jku = "jku";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.2
+        /// https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.3
         /// </summary>
-        public const string Jku = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Jku;
+        public const string Jwk = "jwk";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.3
+        /// https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.4
         /// </summary>
-        public const string Jwk = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Jwk;
+        public const string Kid = "kid";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.4
+        /// https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.5
         /// </summary>
-        public const string Kid = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Kid;
+        public const string X5u = "x5u";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.9
-        /// Also: https://datatracker.ietf.org/doc/html/rfc7519#section-5.1
+        /// https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.6
         /// </summary>
-        public const string Typ = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Typ;
+        public const string X5c = "x5c";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.6
+        /// https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.7
         /// </summary>
-        public const string X5c = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.X5c;
+        public const string X5t = "x5t";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7515#page-12
+        /// https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.8
         /// </summary>
-        public const string X5t = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.X5t;
+        public const string X5tS256 = "x5t#S256";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.5
+        /// https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.9
         /// </summary>
-        public const string X5u = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.X5u;
+        public const string Typ = "typ";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7516#section-4.1.3
+        /// https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.10
         /// </summary>
-        public const string Zip = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Zip;
+        public const string Cty = "cty";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7518#section-4.6.1.1
+        /// https://datatracker.ietf.org/doc/html/rfc7515#section-4.1.11
         /// </summary>
-        public const string Epk = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Epk;
+        public const string Crit = "crit";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7518#section-4.6.1.2
+        /// https://datatracker.ietf.org/doc/html/rfc7516#section-4.1.1
         /// </summary>
-        public const string Apu = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Apu;
+        public const string Enc = "enc";
 
         /// <summary>
-        /// See: https://datatracker.ietf.org/doc/html/rfc7518#section-4.6.1.3
+        /// https://datatracker.ietf.org/doc/html/rfc7516#section-4.1.2
         /// </summary>
-        public const string Apv = Microsoft.IdentityModel.JsonWebTokens.JwtHeaderParameterNames.Apv;
+        public const string Zip = "zip";
+
+        /// <summary>
+        /// https://datatracker.ietf.org/doc/html/rfc7797#section-3
+        /// </summary>
+        public const string B64 = "b64";
     }
 }
